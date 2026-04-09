@@ -1,0 +1,8 @@
+dataset/
+processed_data/
+audio_data/
+models/
+__pycache__/
+*.h5
+*.pt
+*.pth
