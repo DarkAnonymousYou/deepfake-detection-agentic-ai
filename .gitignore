@@ -65,11 +65,13 @@ staging_videos/
 !docs/samples/*.mp4
 !cloud_deployment/web/samples/*.mp4
 
-# Android / Mobile / Flutter Build Artifacts (Over GitHub 100MB limit)
+# Android / Mobile / Flutter Build Artifacts
 *.apk
 *.aab
 DeepfakeDetector_v2.apk
-web/DeepfakeDetector_v2.apk
+# Allow optimized production release APK (47MB, strictly below GitHub 100MB limit) for website direct download
+!docs/DeepfakeDetector_v2.apk
+!web/DeepfakeDetector_v2.apk
 system/frontend/build/
 .dart_tool/
 system/frontend/.dart_tool/
