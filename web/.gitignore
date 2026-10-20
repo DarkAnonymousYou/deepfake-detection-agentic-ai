@@ -1,0 +1,2 @@
+# Ignore large APK binary for git pushes to prevent HF file size limits
+*.apk

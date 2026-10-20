@@ -1,8 +1,101 @@
-dataset/
-processed_data/
-audio_data/
-models/
+# ====================================================================
+# AIRTIGHT GITIGNORE FOR DEEPFAKE DETECTION REPOSITORY
+# Prevents heavy binaries, datasets, environments & logs from GitHub
+# ====================================================================
+
+# Python Virtual Environments (ANY folder named venv/env/.env)
+venv/
+*/venv/
+*/*/venv/
+system/backend/venv/
+train_env/
+deepfake_env/
+.env/
+env/
+ENV/
+
+# Python Bytecode & Cache
 __pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Heavy Deep Learning Model Weights & Binaries (Over GitHub limits)
 *.h5
+*.keras
 *.pt
 *.pth
+*.onnx
+*.tflite
+*.pb
+*.ckpt
+*.weights
+*.pkl
+*.bin
+models/00_BEST_MODEL_PRODUCTION/*.keras
+models/saved_weights/
+cloud_deployment/*.keras
+cloud_deployment/best_model.keras
+
+# Heavy Datasets, Videos & Raw Media (DO NOT PUSH TO GITHUB)
+data/
+dataset/
+datasets/
+processed_data/
+audio_data/
+feedback_data/
+temp_videos/
+staging_videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wmv
+*.flv
+*.webm
+# EXCEPTION: Allow the lightweight demo sample videos inside web/samples/ & docs/samples/
+!web/samples/*.mp4
+!docs/samples/*.mp4
+!cloud_deployment/web/samples/*.mp4
+
+# Android / Mobile / Flutter Build Artifacts (Over GitHub 100MB limit)
+*.apk
+*.aab
+DeepfakeDetector_v2.apk
+web/DeepfakeDetector_v2.apk
+system/frontend/build/
+.dart_tool/
+system/frontend/.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+system/frontend/android/.gradle/
+system/frontend/android/local.properties
+system/frontend/android/app/build/
+system/frontend/android/build/
+system/frontend/ios/Pods/
+system/frontend/ios/.symlinks/
+
+# Logs, Runs, Experiments & System Artifacts
+logs/
+runs/
+experiments/runs/
+*.log
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# IDE, OS & Editor Metadata
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
